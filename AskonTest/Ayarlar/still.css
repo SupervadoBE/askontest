@@ -1,0 +1,270 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border : 0;
+	outline: 0;
+	background: #FFFFFF;
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 14px;
+	color: #646464;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.MaviAlanMenusu a:link, .MaviAlanMenusu a:active, .MaviAlanMenusu a:visited, .MaviAlanMenusu a:hover{
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.AnaMenu a:link, .AnaMenu a:active, .AnaMenu a:visited, .AnaMenu a:hover{
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 14px;
+	color: #646464;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.SonucSayfalari a:link, .SonucSayfalari a:active, .SonucSayfalari a:visited, .SonucSayfalari a:hover{
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 14px;
+	color: #646464;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.FooterMenu a:link, .FooterMenu a:active, .FooterMenu a:visited, .FooterMenu a:hover{
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 14px;
+	color: #646464;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.UyelikFormu a:link, .UyelikFormu a:active, .UyelikFormu a:visited, .UyelikFormu a:hover{
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 14px;
+	color: #646464;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.form-alti a:link, .form-alti a:active, .form-alti a:visited, .form-alti a:hover{
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+	font-size: 12px;
+	color: #646464;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+
+.InputAlanlari{
+	width: 93%;
+	height: 30px;
+	padding: 0px 15px
+}
+
+.SelectAlanlari{
+	width: 100%;
+	height: 38px;
+	padding: 0px 15px
+}
+
+.TextAreaAlanlari{
+	width: 93%;
+	height: 100px;
+	padding: 10px 15px
+}
+
+.YorumIcinTextAreaAlanlari{
+	width: 93%;
+	height: 250px;
+	padding: 10px 15px
+}
+
+.YesilButton{
+	height: 30px;
+	border: 1px solid #00FF00;
+	background: #009900;
+	padding: 5px 30px;
+	color: white;
+}
+
+.YesilButton:hover{
+	border: 1px solid #009900;
+	background: #00FF00;
+	cursor: pointer;
+}
+
+.KargoTakipInputu{
+	width: 70%;
+	height: 30px;
+	padding: 0px 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.KargoTakipButtonu{
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	background: #FF9900;
+	padding: 5px 50px;
+	color: white;
+}
+
+.KargoTakipButtonu:hover{
+	border: 1px solid #FF9900;
+	background: #FF7F00;
+	cursor: pointer;
+}
+
+
+.SorununBaslikAlani{
+	width: 100%;
+	height: 30px;
+	padding-top: 10px;
+	font-size: 14px;
+	color: #000000;
+	line-height: 1.5;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px dashed #CCCCCC;
+	cursor: pointer;
+}
+.SorununBaslikAlani:hover{
+	background: #F1F1F1;
+	cursor: pointer;
+}
+
+
+.SorununCevapAlani{
+	width: 100%;
+	padding-top: 10px; 
+	padding-bottom: 10px;
+	font-size: 13px;
+	line-height: 1.5;
+	border-bottom: 1px dashed #CCCCCC;
+}
+
+
+.BilgilerimiGuncelleButtonu{
+	height: 30px;
+	border: 1px solid #00FF00;
+	background: #009900;
+	padding: 5px 30px;
+	color: white;
+}
+
+.BilgilerimiGuncelleButtonu:hover{
+	border: 1px solid #009900;
+	background: #00FF00;
+	cursor: pointer;
+}
+
+.uyelikButonlari{
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+.uyelikButonlari a:link, .uyelikButonlari a:active, .uyelikButonlari a:visited, .uyelikButonlari a:hover{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+.SayfalamaAlaniKapsayicisi{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-align: center;
+	text-decoration: none;
+}
+.SayfalamaAlanaiIciMetinAlaniKapsayicisi{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-align: center;
+	text-decoration: none;
+}
+.SayfalamaAlanaiIciNumaraAlaniKapsayicisi{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-align: center;
+	text-decoration: none;
+}
+.SayfalamaAktif{
+	display: inline-block;
+	width: auto;
+	height: 20px;
+	margin: 0px 0.5px;
+	padding: 5px 7.5px;
+	background-color: #F6F6F6;
+	border: 1px solid #DADADA;
+	outline: 0;
+	color: #FF0000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.SayfalamaPasif{
+	display: inline-block;
+	width: auto;
+	height: 20px;
+	margin: 0px 0.5px;
+	padding: 5px 7.5px;
+	background-color: #F6F6F6;
+	border: 1px solid #DADADA;
+	outline: 0;
+	color: #646464;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.SayfalamaPasif a:link, .SayfalamaPasif a:active, .SayfalamaPasif a:visited, .SayfalamaPasif a:hover{
+	color: #646464;
+	text-decoration: none;
+}
