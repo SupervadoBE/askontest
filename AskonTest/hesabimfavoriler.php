@@ -74,9 +74,9 @@ if(isset($_SESSION["kullanici"])){
 
 					<?php
 
-					$FavorilerSorgusu			=	$VeritabaniBaglantisi->prepare("SELECT * FROM favoriler WHERE UyeId = ? ORDER BY id DESC LIMIT $SayfalamayaBaslanacakKayitSayisi, $SayfaBasinaGosterilecekKayitSayisi");  // LİMİT VE SAYFALAMA
+					$FavorilerSorgusu	=	$VeritabaniBaglantisi->prepare("SELECT * FROM favoriler WHERE UyeId = ? ORDER BY id DESC LIMIT $SayfalamayaBaslanacakKayitSayisi, $SayfaBasinaGosterilecekKayitSayisi");  // LİMİT VE SAYFALAMA
 					$FavorilerSorgusu->execute([$KullaniciId]);					
-					$FavoriSayisi	=	$FavorilerSorgusu->rowCount();
+					$FavoriSayisi		=	$FavorilerSorgusu->rowCount();
 					$FavoriKayitlari	=	$FavorilerSorgusu->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -85,9 +85,12 @@ if(isset($_SESSION["kullanici"])){
 
 						foreach ($FavoriKayitlari as $FavoriSatirlar) {
 
+							$UrunlerSorgusu	=	$VeritabaniBaglantisi->prepare("SELECT * FROM urunler WHERE id = ? LIMIT 1");  // LİMİT VE SAYFALAMA
+							$UrunlerSorgusu->execute([$FavoriSatirlar["UrunId"]]);					
+							$UrunKayitlari	=	$UrunlerSorgusu->fetch(PDO::FETCH_ASSOC);
 
-
-							$UrunTuru		=	DonusumleriGeriDondur($SiparisSatirlar["UrunTuru"]);
+							$UrununAdi		=	$UrunKayitlari["UrunAdi"];
+							$UrunTuru		=	DonusumleriGeriDondur($UrunKayitlari["UrunTuru"]);
 
 							if($UrunTuru == "Erkek Ayakkabısı"){
 								$ResimKlasoruAdi	=	"Erkek";
@@ -97,42 +100,49 @@ if(isset($_SESSION["kullanici"])){
 								$ResimKlasoruAdi	=	"Cocuk";
 							}
 
+							$UrununResmi		=	$UrunKayitlari["UrunResmiBir"];
+
+							$UrununFiyati		=	$UrunKayitlari["UrunFiyati"];
+							$UrununParaBirimi	=	$UrunKayitlari["ParaBirimi"];
+
+							$FavorininIdsi		=	$FavoriSatirlar["id"];
+							$UrunIdsi			=	$UrunKayitlari["id"];
 
 
 						?>
 
 							<tr height="30">
-								<td width="75" align="left">
-									<img src="Resimler/UrunResimleri/
+								<td width="75" align="left" style="border-bottom: 1px dashed #CCCCCC">
+									<a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($UrunIdsi); ?>">
+										<img src="Resimler/UrunResimleri/
 									<?php 
-										echo $ResimKlasoruAdi . "/" . DonusumleriGeriDondur($SiparisSatirlar["UrunResmiBir"]);
+										echo $ResimKlasoruAdi . "/" . DonusumleriGeriDondur($UrununResmi);
 									?>
 									" border="0" width="60">
+									</a>
 								</td>
-								<td width="25" align="left">
-									&nbsp;&nbsp;<a href="index.php?SK=75&UrunID=<?php echo DonusumleriGeriDondur($SiparisSatirlar["UrunId"]); ?>" style="text-decoration: none; color:#646464;"><i class="fas fa-trash-alt"></i></a>
+								<td width="25" align="left" style="border-bottom: 1px dashed #CCCCCC">
+									&nbsp;&nbsp;<a href="index.php?SK=81&ID=<?php echo DonusumleriGeriDondur($FavorininIdsi); ?>" style="text-decoration: none; color:#646464;"><i class="fas fa-trash-alt"></i></a>
 								</td>
-								<td width="865" align="left">
+								<td width="865" align="left" style="border-bottom: 1px dashed #CCCCCC">
+									<a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($UrunIdsi); ?>" style="color: #646464; text-decoration: none;">
 									<?php 
-										echo DonusumleriGeriDondur($SiparisSatirlar["UrunAdi"]);
+										echo DonusumleriGeriDondur($UrununAdi);
 									?>
+									</a>
 								</td>
-								<td width="100" align="left">
+								<td width="100" align="left" style="border-bottom: 1px dashed #CCCCCC">
+									<a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($UrunIdsi); ?>" style="color: #646464; text-decoration: none;">
 									<?php 
-										echo FiyatBicimlendir(DonusumleriGeriDondur($SiparisSatirlar["UrunFiyati"])) . " TRY";
+										echo FiyatBicimlendir(DonusumleriGeriDondur($UrununFiyati)) . " " . DonusumleriGeriDondur($UrununParaBirimi);
 									?>
+									</a>
 								</td>
 								
-								<td valign="top" colspan="4" style="border-bottom: 1px dashed #CCCCCC">
-									
-								</td>
 							</tr>
 
 
 
-						<tr height="30">
-							<td colspan="4"><hr /></td>
-						</tr>
 						<?php
 						}
 
